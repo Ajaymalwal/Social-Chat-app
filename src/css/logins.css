@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+  }
+  .login-container {
+    position: relative;
+    background-color: #181818;
+    color: whitesmoke;
+  }
+ 
+  
+  #login{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+  }
+  #title, #signupTitle {
+    padding-left: 0%;
+  }
+  
+  form {
+    width: 50vw;
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-footer, .login-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #loginLink{
+    font-weight: 700;
+    cursor: pointer;
+    color: cornflowerblue;
+  }
+  #signupLink{
+    font-weight: 700;
+    cursor: pointer;
+    color: #2196F3;
+  }
+  

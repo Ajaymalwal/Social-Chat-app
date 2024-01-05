@@ -1,0 +1,178 @@
+
+#Home {
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    color: white;
+  }
+  
+  #first-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0% 3% 0 3%;
+  }
+  #welcomemsg{
+    flex-basis: 50%;
+    min-width: 300px;
+  }
+  #welcomemsg h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin:25px 0;
+  }
+  #block-firstpage-Image{
+    width: 500%;
+    margin-top: 20px;/* Add a margin to push the image down */
+    max-width: 50%; /* Ensure it doesn't exceed 50% of the parent width */
+  }
+  #firstpage-Image{
+    filter:drop-shadow(40px 80px 10px #777);
+    transform: scale(0.65);
+    position: relative;
+    animation: image-left-right 1.5s 1;
+  }
+  @keyframes image-left-right{
+    from{right:20%;}
+    to{right: 0%;}
+  }
+  .login{
+    margin:10% 0 0 10%;
+    background:blue;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 18px;
+    border-style: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+  #second-section{
+    padding: 10px;
+    align-items: center;
+    background-color:#313131;
+    text-decoration: none;
+  }
+  .all-icons{
+    display: flex;
+    padding: 3%;
+  }
+  .icon{
+    padding: 3%;
+  }
+  h2{
+    font-size: 40px;
+  }
+  .icon-name{
+   font-family: 'Lora', Serif;
+    font-size:25px;
+    display: inline-block;
+  }
+  .icon-breif{
+    font-size:15px;
+    display: inline-block;
+  }
+  .icons{
+    display: inline-block;
+    align-items: center;
+    font-size: 100px;
+  }                    
+  #third-section{
+    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+  }
+  .section3-div2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    font-size: 100px;
+  }
+  .section3-p{
+    font-size: 130%;
+    font-family:Arial, Helvetica, sans-serif
+  }
+  .section3-buttons{
+   align-items: center;
+  }
+  .signup{
+    color: #fff;
+    background-color: #f9313187;
+    cursor: pointer;
+  }
+  footer {
+    color: #fff;
+    text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+  }
+  
+  .footer-section {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+  }
+  #about-us-btn{
+    margin:10% 0 0 10%;
+    background:blue;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 18px;
+    border-style: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .about-us-breif{
+    align-items:center ;
+    font-size: 100%;
+    display: inline-block;
+    display: flex;
+  }
+  
+  .login:hover,#about-us-btn:hover{
+    background-color: #58c2edef;
+  }
+  #madeby{
+    font-size: 150%;
+    text-align: center;
+  }
+  
+  /* For smaller screens (e.g., mobile) */
+  @media(max-width: 768px){
+    body {
+      margin: 0;
+      padding: 0; 
+    }
+    #first-section,footer,.section3-div2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px; 
+      overflow: hidden;
+    }
+    
+    #block-firstpage-Image {
+     width: 100%; /* Take up full width on smaller screens */
+      max-width: 100%;
+      margin-top: 0px; 
+     
+    }
+    .all-icons {
+      flex-direction: column; /* Stack icons and text vertically */
+      align-items: center; /* Center icons and text horizontally */
+    }
+  
+    .icon {
+      margin-bottom: 20px; /* Add space between icons */
+    }
+  
+  
+  }
+  
+  

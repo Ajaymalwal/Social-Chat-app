@@ -1,0 +1,52 @@
+footer {
+  color: #fff;
+  text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+#about-us-btn{
+  margin:10% 0 0 10%;
+  background:blue;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 18px;
+  border-style: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.about-us-breif{
+  align-items:center ;
+  font-size: 100%;
+  display: inline-block;
+  display: flex;
+}
+
+.login:hover,#about-us-btn:hover{
+  background-color: #58c2edef;
+}
+#madeby{
+  font-size: 150%;
+  text-align: center;
+}
+
+/* For smaller screens (e.g., mobile) */
+@media(max-width: 768px){
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+    overflow: hidden;
+  }
+}
+

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+*{
+  margin: 0;
+   box-sizing: border-box;
+}
+#fullLogo{
+  height: 120px;
+  width:  120px;
+}
+#logo{
+  height: 150%;
+  width: 150%;
+  
+}
+#header{
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  
+}
+nav{
+  flex: 1;
+}
+
+
+#menuItems {
+  position: relative;
+  display: flex;
+  height: 100%;
+  transition: all 0.5s;
+  float: right; 
+}
+.nav-bar{
+  position: relative;
+  display: none;
+  font-size: 50px;
+  cursor: pointer;
+  float: right;
+}
+.line1, .line2, .line3{
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.5s;
+  position:relative;
+  margin: 5px;
+
+}
+
+.cross1{
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  top: 4px;
+}
+.cross2{
+  transform: rotate(-40deg);
+  transition: all 0.5s;
+  bottom: 3px;
+}
+.hidden {
+
+display: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  
+}
+a::after{
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background:#ffffff;
+  transition: width 500ms;
+}
+a:hover::after{
+  border-radius: 10%;
+  width: 100%;
+  }
+  a:active{
+    background-color: #777;
+  }
+nav ul li{
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 150%;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+.nav-links{
+  display: block;
+}
+#chatlink{
+  display: none;
+}
+
+/* For smaller screens (e.g., mobile) */
+@media(max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #menuItems { 
+      position:fixed;
+      width: 70vw;
+      height: 100%;
+      transition:flex-direction 0.5s;
+      display: flex;
+     flex-direction: column;
+
+     
+    }
+    #menuItems li{
+      padding: 1em;
+    }
+ .overlay{
+  transition: all 0.5s;
+  position:fixed ;
+  right: -70vw; /* Initial position outside the viewport */
+  width: 70vw;
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+ }
+ .overlay.active{
+  right: 0;
+ }
+ #menuItems.active {
+
+  right: 0; /* Bring the menuItems into view */
+}
+/* Add this style for the side navigation menu */
+
+.nav-bar{
+  display: inline-block;
+  z-index: 9;
+}
+
+}
+
