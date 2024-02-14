@@ -72,16 +72,13 @@
 
 #chatContainer {
   overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: #888 #f0f0f0;
 }
 
-/* Define the style for the scrollbar track */
+
 #chatContainer::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Define the style for the scrollbar thumb */
 #chatContainer::-webkit-scrollbar-thumb {
   background: linear-gradient(141.27deg, #ff904e -4.24%, #ff5982 21.25%, #ec68f4 44.33%, #79e2ff 83.46%);
   border-radius: 20px;
