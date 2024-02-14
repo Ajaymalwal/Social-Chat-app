@@ -1,28 +1,29 @@
 footer {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
     background-color: #111;
 }
+.footer2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.footer-section {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
+  flex: 1;
+  margin-bottom: 8%;
+}
+
+.footer-part1 {
+flex: 1;
+text-align: center;
+padding: 10px;
 }
 #about-us-btn{
-  margin:10% 0 0 10%;
-  background:blue;
-  color: white;
-  width: 100px;
-  height: 30px;
-  border-radius: 18px;
-  border-style: none;
-  display: inline-block;
-  cursor: pointer;
+ cursor: pointer;
+ text-decoration: underline;
+ border: none;
+ background-color: #111;
+ color: aliceblue;
 }
 .about-us-breif{
   align-items:center ;
@@ -31,13 +32,21 @@ footer {
   display: flex;
 }
 
-.login:hover,#about-us-btn:hover{
-  background-color: #58c2edef;
+#about-us-btn:hover{
+  text-decoration: none;
+}
+.contact{
+  padding: 10px;
+}
+.contact a{
+  padding-left: 10px;
 }
 #madeby{
   font-size: 150%;
   text-align: center;
 }
+
+
 
 /* For smaller screens (e.g., mobile) */
 @media(max-width: 768px){

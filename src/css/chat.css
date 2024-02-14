@@ -32,11 +32,15 @@
     justify-content: space-evenly ;
     align-items: center;
     position:absolute ;
-    bottom: -150px;
     width: 75%;
     height: 10%;
     color: #cfcfcf;
     background-color:#181818;
+
+  }
+  .send-message img{
+   transform: scale(0.8);
+   
   }
   .input-message{ 
     float: left;
@@ -57,8 +61,9 @@
     background: linear-gradient(141.27deg, #ff904e -4.24%, #ff5982 21.25%, #ec68f4 44.33%, #79e2ff 83.46%);
     border: none;
     border-radius: 10px;
-    font-size: 2em;
-    
+    display:flex;
+    align-items: center;
+    justify-content: center;    
   }
   #chats{
     padding: 2%;

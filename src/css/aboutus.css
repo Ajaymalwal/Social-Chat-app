@@ -19,25 +19,35 @@ h2{
   
 }
 .breif{
-    font-size: 2em;
+    font-size: 1.5rem;
     text-align: center;
     padding: 5%;
 }
 .col{
     display: flex;
-    padding-left: 15%;
+    justify-content: space-evenly;
+    
 }
 .coldata{
    flex: auto;
-   text-align: center;
+   padding-left: 10%;
 }
 .circle{
     display: block;
     height: 150px;
     width: 150px;
     border-radius: 77.5px;
-    border: 5px solid black;
-    text-align: center;
+    border: 5px solid rgb(32, 165, 125);
+    overflow: hidden;
+    
+}
+.images{  
+    width: 100%;
+    height: auto;
+
+}
+.name{
+    padding-left: 9%;
 }
 
 .section4,.section3{
@@ -50,14 +60,18 @@ h2{
     align-items: center;
 }
 .signup-btn{
-    width: 100px;
-    height: 40px;
-    background-color:#3838fff1;
-    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    background-color:transparent;
+    border-radius: 25px;
     color: whitesmoke;
+    font-weight: bold;
+    border: 2px solid rgb(29, 204, 224);
 }
 .signup-btn:hover{
-    background-color: cadetblue;
+    font-weight: bold;
+    color: #181818;
+    background-color: rgb(29, 204, 224);
 }
 .section1.section2.section3.section4{
     margin-top: 20px;

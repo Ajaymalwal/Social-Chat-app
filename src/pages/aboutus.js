@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/aboutus.css';
+import  images  from "../images/ankushphoto.jpg";
 
 function AboutUs(){
 
@@ -26,7 +27,9 @@ function AboutUs(){
         <h3 className="name">Ajay Malwal</h3>
       </div>
       <div className="section3-2 coldata">
-        <span className="circle" />  
+       <div className="circle">
+        <img src={images} alt="" className="images"></img>
+       </div>
         <h3 className="name">Ankush Bhujeja</h3>
       </div>
       <div className="section3-3 coldata">

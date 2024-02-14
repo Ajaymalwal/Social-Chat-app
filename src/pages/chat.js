@@ -1,11 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import '../css/chat.css';
 import { database } from '../firebase';
-import { getDatabase,push,ref,onValue } from 'firebase/database';
-import LoginS from './login';
+import { getDatabase,push,ref,onValue} from 'firebase/database';
 import { autho ,firestoredb} from '../firebase';
 import { doc,getDoc } from 'firebase/firestore';
-
+import sendicon from '../images/paper-plane.png';
 
 
 function CurrentTime() {
@@ -23,7 +22,6 @@ function CurrentTime() {
   const [userCollege, setUserCollege] = useState('');
   const [userCollegeCity, setUserCollegeCity] = useState('');
 
-  const userToken = LoginS.user;
 
   useEffect(() => {
     const getUserDataByUid = async () => {
@@ -55,21 +53,22 @@ function CurrentTime() {
     onValue(messagesRef,(snapshot) => {
 
       const newItems = snapshot.val();
+      if (newItems){
       const receivedMessages = Object.values(newItems);
       const accumlatedMessage =[];
       receivedMessages.forEach((e)=>{
-     accumlatedMessage.push({...e.newMessage});
+    
+          accumlatedMessage.push({...e.newMessage});
+        
+        
+    
      
     });
      setMessages(accumlatedMessage);
 
-
+  }
     },
-    {
-      Headers:{
-        'Authorization' : `Bearer ${userToken}`, 
-      }
-    },
+   
      (errorObject) => {
       console.log('The read failed: ' + errorObject.name);
     });
@@ -92,15 +91,14 @@ function CurrentTime() {
     collegeCity : userCollegeCity,
     time: CurrentTime(),
   };
-     
+  
+
+
     push(ref(database),{
       newMessage
 
-    },{
-      Headers:{
-        'Authorization' : `Bearer ${userToken}`, 
-      }
-    });
+    
+     } );
     
 
 
@@ -146,7 +144,7 @@ function CurrentTime() {
             onKeyPress={handleKeyPress}
           ></input>
           <button type="submit" className="send-message" onClick={HandleSendButton}>
-            Send
+            <img src={sendicon} alt='send icon and send button'/>
           </button>
         </form>
       </div>

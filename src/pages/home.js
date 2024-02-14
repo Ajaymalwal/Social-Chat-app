@@ -50,13 +50,11 @@ function Home(){
   </div>
   <div id="third-section">
     <div className="section3-div1">
-      <h2>Join Our Vibrant</h2>
-      <h2>Community</h2>
-      <p className="section3-p ">Don't miss out on the chance to connect with people from diverse cultures and backgrounds. Whether you're looking to make new friends, learn about different cultures, or simply chat for fun, SocialChat is the perfect place to do it.</p>
+      <h2>Join Our Community</h2>
     </div>
     <div className="section3-div2">
       <input type="button" defaultValue="Login" onClick={() => Navigate('/login')} className="section3-buttons login" />
-      <input type="button" defaultValue="Sign Up" onClick={()=> Navigate('/login')} className="section3-buttons signup login" />
+      <input type="button" defaultValue="Sign Up" onClick={()=> Navigate('/login')} className="section3-buttons signup-btn" />
     </div>
   </div>
 </div>

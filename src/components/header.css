@@ -9,12 +9,14 @@ body {
    box-sizing: border-box;
 }
 #fullLogo{
-  height: 120px;
+  height: 80px;
   width:  120px;
 }
 #logo{
   height: 150%;
+  object-fit: cover;
   width: 150%;
+  padding-bottom: 25%;
   
 }
 #header{
@@ -24,6 +26,7 @@ body {
   padding: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   
 }
 nav{

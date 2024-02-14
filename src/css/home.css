@@ -7,11 +7,12 @@
   }
   
   #first-section {
-    flex: 1;
+
     display: flex;
     align-items: center;
+    justify-self:center ;
     text-decoration: none;
-    padding: 0% 3% 0 3%;
+
   }
   #welcomemsg{
     flex-basis: 50%;
@@ -20,11 +21,17 @@
   #welcomemsg h1{
     font-size: 50px;
     line-height: 60px;
-    margin:25px 0;
+   
+  }
+  #welcomemsg h4{
+    position: relative;
+    top: 10%;
+    left: 25%;
   }
   #block-firstpage-Image{
+    display: flex;
+    justify-content: center;
     width: 500%;
-    margin-top: 20px;/* Add a margin to push the image down */
     max-width: 50%; /* Ensure it doesn't exceed 50% of the parent width */
   }
   #firstpage-Image{
@@ -37,17 +44,27 @@
     from{right:20%;}
     to{right: 0%;}
   }
-  .login{
-    margin:10% 0 0 10%;
-    background:blue;
+.login{
+    background:transparent;
     color: white;
-    width: 100px;
-    height: 30px;
-    border-radius: 18px;
-    border-style: none;
+    border: 2px solid rgb(29, 224, 201);
+    width: 200px;
+    height: 50px; 
+    border-radius: 50px;
     display: inline-block;
     cursor: pointer;
+    font-weight: bold;
   }
+.login:hover{
+  background: rgb(29, 224, 201);
+  color: #181818;
+  font-weight: bold;
+}
+#welcomemsg .login{
+  position: relative;
+  top: 60px;
+  left: 30%;
+}
   #second-section{
     padding: 10px;
     align-items: center;
@@ -79,70 +96,38 @@
     font-size: 100px;
   }                    
   #third-section{
-    text-decoration: none;
     padding: 10px;
-    align-items: center;
+   
+    height: 300px;
+    justify-content: space-evenly;
+
+  }
+  .section3-div1{
+    position: relative;
+    left: 10%;
+    width: 80%;
   }
   .section3-div2{
+    position: relative;
+    top: 20%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
     margin: 5px;
-    font-size: 100px;
+  }
+  .section3-buttons{
+    display: inline-block;
   }
   .section3-p{
     font-size: 130%;
     font-family:Arial, Helvetica, sans-serif
   }
-  .section3-buttons{
-   align-items: center;
-  }
+ 
   .signup{
     color: #fff;
     background-color: #f9313187;
     cursor: pointer;
   }
-  footer {
-    color: #fff;
-    text-decoration: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #111;
-  }
-  
-  .footer-section {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-  }
-  #about-us-btn{
-    margin:10% 0 0 10%;
-    background:blue;
-    color: white;
-    width: 100px;
-    height: 30px;
-    border-radius: 18px;
-    border-style: none;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .about-us-breif{
-    align-items:center ;
-    font-size: 100%;
-    display: inline-block;
-    display: flex;
-  }
-  
-  .login:hover,#about-us-btn:hover{
-    background-color: #58c2edef;
-  }
-  #madeby{
-    font-size: 150%;
-    text-align: center;
-  }
-  
+
   /* For smaller screens (e.g., mobile) */
   @media(max-width: 768px){
     body {
