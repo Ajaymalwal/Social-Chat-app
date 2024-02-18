@@ -22,7 +22,7 @@ function CurrentTime() {
   const [userCollege, setUserCollege] = useState('');
   const [userCollegeCity, setUserCollegeCity] = useState('');
 
-
+// Accessing firestore database for the collegename and the college city of the user
   useEffect(() => {
     const getUserDataByUid = async () => {
       try {
@@ -42,9 +42,11 @@ function CurrentTime() {
     };
 
     getUserDataByUid();
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []); 
 
-  useEffect((userToken) => {
+  //Accessing the realtime database for the Read operation 
+
+  useEffect(() => {
     
 
     const database = getDatabase(); 
@@ -58,12 +60,9 @@ function CurrentTime() {
       const accumlatedMessage =[];
       receivedMessages.forEach((e)=>{
     
-          accumlatedMessage.push({...e.newMessage});
+       accumlatedMessage.push({...e.newMessage});
         
-        
-    
-     
-    });
+        });
      setMessages(accumlatedMessage);
 
   }
@@ -75,14 +74,14 @@ function CurrentTime() {
   }, []);
 
 
-   
+   // handle send button 
   const HandleSendButton = async(e) => {
     e.preventDefault();
     if(message === ""){
       return;
     }
     
-     
+ // object that contain the Message and the related data     
   var newMessage = {
     text: message,
     sender: autho.currentUser.displayName,
@@ -93,19 +92,18 @@ function CurrentTime() {
   };
   
 
-
+// handling the write operation in the realtime database
     push(ref(database),{
       newMessage
-
-    
-     } );
+   } );
     
 
 
-    // Clear the message input
+    // Clear the message input after sending the message
     setMessage('');
   };
-
+ 
+  // Handle the Enter key press 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       HandleSendButton(e);
