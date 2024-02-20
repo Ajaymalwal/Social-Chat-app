@@ -25,10 +25,12 @@ function Header() {
   };
   
  const logOut = async () => {
-  
+     const confirm = window.confirm("Are you sure you want to log out?")
+  if(confirm){
     await signOut(autho);
     alert('User signed out successfully',autho);
     navigate('/login');
+  }
     
   };
 
@@ -46,7 +48,7 @@ function Header() {
         </div>
         <div id="overlay" className={`overlay ${menuActive ? 'active' : ''}`}>
           <ul id="menuItems" className={`menuItems ${menuActive ? 'active' : ''}`}>
-            <li  style={{ display: autho.currentUser ? 'none' : 'inline-block' }}><Link to='/home'>Home</Link>{location.pathname === '/home' && <span style={activeUnderlineStyle}></span>}</li>
+            <li  style={{ display: autho.currentUser ? 'none' : 'inline-block' }}><Link to='/'>Home</Link>{location.pathname === '/' && <span style={activeUnderlineStyle}></span>}</li>
             <li><Link to='/aboutus'>About Us</Link>{location.pathname === '/aboutus' && <span style={activeUnderlineStyle}></span>}</li>
             <li style={{ display: autho.currentUser ? 'none' : 'inline-block' }}><Link to='/login' >Login/SignUP</Link>{location.pathname === '/login' && <span style={activeUnderlineStyle}></span>}</li>
             <li id="chatlink" style={{ display: autho.currentUser ? 'inline-block' : 'none' }}><Link to="/chat" >Chat</Link>{location.pathname === '/chat' && <span style={activeUnderlineStyle}></span>}</li>

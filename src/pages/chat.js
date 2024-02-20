@@ -51,7 +51,6 @@ function CurrentTime() {
 
     const database = getDatabase(); 
     const messagesRef = ref(database);
-   
     onValue(messagesRef,(snapshot) => {
 
       const newItems = snapshot.val();
@@ -59,8 +58,11 @@ function CurrentTime() {
       const receivedMessages = Object.values(newItems);
       const accumlatedMessage =[];
       receivedMessages.forEach((e)=>{
+        accumlatedMessage.push({...e.newMessage})
+      
     
-       accumlatedMessage.push({...e.newMessage});
+    
+       console.log(accumlatedMessage)
         
         });
      setMessages(accumlatedMessage);
@@ -90,12 +92,13 @@ function CurrentTime() {
     collegeCity : userCollegeCity,
     time: CurrentTime(),
   };
-  
-
+ 
+ 
 // handling the write operation in the realtime database
     push(ref(database),{
       newMessage
-   } );
+    }
+    );
     
 
 

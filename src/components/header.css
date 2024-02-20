@@ -27,7 +27,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
 }
 nav{
   flex: 1;
@@ -82,6 +85,8 @@ a{
 a::after{
   content: '';
   width: 0px;
+  position: relative;
+  top: 2px;
   height: 2px;
   display: block;
   background:#ffffff;

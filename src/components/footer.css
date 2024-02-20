@@ -3,6 +3,8 @@ footer {
     display: flex;
     padding: 20px;
     background-color: #111;
+    position: relative;
+    top: 100px;
 }
 .footer2{
   display: flex;
@@ -44,6 +46,8 @@ padding: 10px;
 #madeby{
   font-size: 150%;
   text-align: center;
+  position: relative;
+  top: 100px;
 }
 
 

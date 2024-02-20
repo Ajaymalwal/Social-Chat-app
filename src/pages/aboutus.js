@@ -1,6 +1,8 @@
 import React from "react";
 import '../css/aboutus.css';
-import  images  from "../images/ankushphoto.jpg";
+import  ankushphoto  from "../images/ankushphoto.jpg";
+import  rohitphoto from "../images/rohitphoto.jpg";
+import  ajayphoto  from "../images/ajayphoto.jpg";
 
 function AboutUs(){
 
@@ -23,17 +25,21 @@ function AboutUs(){
     <h2>Meet the Team</h2>   
     <div className="col">
       <div className="section3-1 coldata">
-        <span className="circle" />
+      <div className="circle">
+        <img src={ajayphoto} alt="" className="images"></img>
+          </div>  
         <h3 className="name">Ajay Malwal</h3>
       </div>
       <div className="section3-2 coldata">
        <div className="circle">
-        <img src={images} alt="" className="images"></img>
+        <img src={ankushphoto} alt="" className="images"></img>
        </div>
         <h3 className="name">Ankush Bhujeja</h3>
       </div>
       <div className="section3-3 coldata">
-        <span className="circle" />  
+        <div className="circle">
+        <img src={rohitphoto} alt="" className="images"></img>
+          </div>  
         <h3 className="name">Rohit Saini</h3>
       </div>
     </div>
